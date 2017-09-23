@@ -1,0 +1,104 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D相册</title>
+<style>
+    body{
+        background:radial-gradient(circle,#555,#000,#000);
+        height: 100%;
+        display: flex; 
+         /*开启弹性布局*/
+        justify-content: center;
+        /*水平居中*/
+        align-items: center;
+        /*数值方向居中*/
+        /*body默认有8px的外边距*/
+        margin: 0;
+        /*外边距*/
+        overflow: hidden;
+        /*剪切掉元素溢出内容*/
+        perspective: 1500px;
+        /*景深:写一个距离,浏览器会改变你据电脑的实际距离*/
+    }
+    /*标签选择器*/
+    main{
+        width:  300px;
+        height: 300px;
+        /*边框线*/
+        border: 1px solid rebeccapurple;
+        /*边框粗细,实线 solid 虚线 dashed 点线 dotted 双实线 double*/
+        position: relative;
+        /*相对位置参考元素本身*/
+        /*absolute 绝对位置,参考位置:定义了定位类型的父级元素,如果父级元素没有定义类型,
+        找上级,逐级向上找,直到找到body,绝对定位会浮起来*/
+        transform-style:preserve-3d; 
+        /*元素变换的样式类型*/
+        /*css3动画*/
+        animation: r 5s infinite linear;
+        /*动画,动画名,时间,循环,匀速*/
+    }
+    @keyframes r {
+        0%{
+         transform: rotateX(0) rotateY(0);
+        }
+        50%{
+            transform: 
+        }
+        100%{
+         transform: rotateX(360deg) rotateY(360deg);
+         /*0可无单位,其他都要*/
+        }
+    }
+    /*定义了动画执行的动作*/
+    div{
+        width:100%;
+        height: 100%;
+        border: 1px solid rebeccapurple;
+        position: absolute;
+        /*绝对定位*/
+
+    }
+    .front{
+        background-image: url(1.JPG);
+        transform: translateZ(150px);
+        /*translateY位移*/
+
+        
+    }
+    .back{
+        background-image: url(2.JPG);
+        transform: translateZ(-150px);
+    }
+    .left{
+        background-image: url(3.JPG);
+
+        transform: rotateY(90deg) translateZ(-150px);
+        /*变换:绕着Y轴转90度,沿Z轴反方向平移150像素*/
+    }
+    .right{
+        background-image: url(4.JPG);
+
+        transform: rotateY(90deg) translateZ(150px);
+    }
+    .top{
+        background-image: url(5.JPG);
+      transform: rotateX(90deg) translateZ(150px);
+    }
+    .bottom{
+        background-image: url(6.JPG);
+       transform: rotateX(90deg) translateZ(-150px);
+    }
+</style>
+</head>
+<body>
+ <main>
+ <div class="front"></div>
+ <div class="back"></div>
+ <div class="left"></div>
+ <div class="right"></div>
+ <div class="top"></div>
+ <div class="bottom"></div>
+ </main>
+</body>
+</html>

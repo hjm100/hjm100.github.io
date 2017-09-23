@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东-注册</title>
+    <link href="images/icon.png" rel="shortcut icon" type="image/png"/>
+    <meta name="description" content="京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!">
+    <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东">
+    <link rel="stylesheet" href="css/login.css"/>
+    <script src="libs/jquery-3.1.0.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body class="regist">
+    <div id="reg-header" class="header">
+        <div class="logo-con w clearfix">
+            <a href="" class="logo"></a>
+            <div class="logo-title">欢 迎 注 册</div>
+            <div class="have-account">已有账号<a href="#">请登录</a></div>
+        </div>
+    </div>
+    <div id="reg-content" class="w">
+        <div class="reg-form-main">
+            <div class="rfm-left">
+                <form action="" method="POST">
+                    <div class="reg-username form-item">
+                        <label for="">用 户 名</label>
+                        <txt>您的账户名和用户名</txt>
+                        <input type="text" name="regname" value="" autocomplete="off" maxlength="20">
+                        <i class="status"></i>
+                    </div>
+                    <div class="input-tip"><span class="reg-name-error"><i class="i-error">支持中文,字母,数字,"_""-"的组合,4-20个字符</i></span></div>
+                    <div class="reg-pasword form-item">
+                        <label for="">设 置 密 码</label>
+                        <txt>建议使用两种字符组合</txt>
+                        <input type="password"name="regpwd" value="" autocomplete="off" maxlength="20">
+                        <i class="status"></i>
+                        <div class="capital-tip">
+                            大写已开启
+                            <div class="arrow"></div>
+                            <div class="arrow-inner"></div>
+                        </div>
+                    </div>
+                    <div class="input-tip"><span class="reg-pwd-error"><i class="i-error">建议使用字母,数字.和符号两种及以上的组合,6-20个字符</i></span></div>
+                    <div class="reg-confirm form-item">
+                        <label for="">确 认 密 码</label>
+                        <txt>请再次输入密码</txt>
+                        <input type="password" name="cpwd" value="" autocomplete="off" maxlength="20">
+                        <i class="status"></i>
+                        <div class="capital-tip">
+                            大写已开启
+                            <div class="arrow"></div>
+                            <div class="arrow-inner"></div>
+                        </div>
+                    </div>
+                    <div class="input-tip"><span class="reg-cpwd-error"><i class="i-error">请再次输入密码</i></span></div>
+                    
+                    <div class="reg-email-wrap">
+                        <div class="form-item">
+                            <label for="">邮箱验证</label>
+                            <txt>建议使用常用邮箱</txt>
+                            <input type="email" name="regemall" value="" autocomplete="off" maxlength="20">
+                            <i class="status"></i>
+                            <ul class="email-suggest">
+                                <li><div class="value">@qq.com</div></li>
+                                <li><div class="value">@163.com</div></li>
+                                <li><div class="value">@126.com</div></li>
+                                <li><div class="value">@sina.com</div></li>
+                                <li><div class="value">@sohu.com</div></li>
+                                <li><div class="value">sd@Gmail.com</div></li>
+                            </ul>
+                        </div>
+                        <div class="input-tip"><span class="reg-email-error"><i class="i-error">完成验证后,你可以使用该邮箱登录和找回密码</i></span></div>
+                        <div class="orPhone">或<a href="#">手机验证</a></div>
+                    </div>
+                    
+                     <div class="reg-phone-wrap">
+                        <div class="form-item">
+                            <label for="">中国 + 68 <a class="arrow" href="#"></a> </label>
+                            <txt>建议使用常用手机</txt>
+                            <input type="tel" name="regpnone" value="" autocomplete="off" maxlength="20">
+                            <i class="status"></i>
+                            <div class="scrollbar1">
+                                <div class="scrollbar">
+                                    <div class="track">
+                                        <div class="thumb">
+                                            <div class="end"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="viewport">
+                                    <div class="overview">
+                                        <ul class="phone-suggest">
+                                            <li class="suggest"><div class="value">中国 +86</div></li>
+                                            <li class=""><div class="value">台湾 +886</div></li>
+                                            <li class=""><div class="value">中国 +86</div></li>
+                                            <li class=""><div class="value">台湾 +886</div></li>
+                                            <li class=""><div class="value">中国 +86</div></li>
+                                            <li class=""><div class="value">台湾 +886</div></li>
+                                            <li class=""><div class="value">中国 +86</div></li>
+                                            <li class=""><div class="value">台湾 +886</div></li>
+                                            <li class=""><div class="value">中国 +86</div></li>
+                                            <li class=""><div class="value">台湾 +886</div></li>
+                                            <li class=""><div class="value">中国 +86</div></li>
+                                            <li class=""><div class="value">台湾 +886</div></li>
+                                            <li class=""><div class="value">中国 +86</div></li>
+                                            <li class=""><div class="value">台湾 +886</div></li>
+                                            <li class=""><div class="value">中国 +86</div></li>
+                                            <li class=""><div class="value">台湾 +886</div></li>
+                                            <li class=""><div class="value">中国 +86</div></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-tip"><span class="reg-phone-error"><i class="i-error">完成验证后,你可以使用该手机登录和找回密码</i></span></div>
+                        <div class="orEmail">或<a href="#">邮箱验证</a></div>
+                    </div>
+
+                    <div class="reg-authcode form-item">
+                        <label for="">验 证 码</label>
+                        <txt>请输入验证码</txt>
+                        <input type="text" name="authCode" value="" autocomplete="off" maxlength="20">
+                        <img class="img-code" src="" alt="">
+                        <i class="status"></i>
+                    </div>
+                    <div class="input-tip"><span class="reg-authcode-error"><i class="i-error">看不清点击图片更换验证码</i></span></div>
+
+                    <div class="reg-phonecode form-item">
+                        <label for="">手机验证码</label>
+                        <txt>请输入手机验证码</txt>
+                        <input type="text" name="regname" value="" autocomplete="off" maxlength="20">
+                        <button type="button" class="btn-phonecode">获取验证码</button>
+                        <i class="status"></i>
+                    </div>
+                    <div class="input-tip"><span class="reg-phonecode-error"></span></div>
+                    
+                    <div class="form-agreen">
+                       <div>
+                           <input name="agreen" type="checkbox">我已经阅读并同意
+                           <a id="protocol" href="#">《京东用户注册协议》</a>
+                       </div>
+                    </div>
+                    <div class="input-tip"><span></span></div>
+
+                    <button class="btn-register" type="submit">立即注册</button>
+                
+                </form>
+            </div>
+            <div class="rfm-right">
+                <div class="phone-fast-reg"></div>
+                <div class="company-reg"><a href="#"><i class="i-company"></i><span>企业用户注册</span></a></div>
+                <div class="inter-cust"><a href="#"><i class="i-global"></i><span>INTERNATIONAL<br>CUSTOMERS</span></div>
+            </div>
+            <div class="protocol">
+                <div class="pr-content">
+                    <h1>京东钱包服务协议</h1>
+                    一、 协议的确认<br>
+                    二、相关定义<br>
+                    三、服务内容<br>
+                    四、京东钱包会员号和账户的注册、使用和注销<br>
+                    五、使用京东钱包服务的注意事项<br>
+                    六、信息、收集、共享<br>
+                    七、用户合法使用京东钱包服务的承诺<br>
+                    八、权益保障及隐私保护<br>
+                    九、不可抗力、免责及责任限制<br>
+                    十、协议的完整性<br>
+                    十一、知识产权的保护<br>
+                    十二、法律适用与管辖<br>
+                    京东钱包服务协议（以下简称本协议）由网银在线（北京）科技有限公司（以下简称本公司）和您签订。
+                </div>
+                <div class="pro-btn"><button>同意并接受</button></div>
+            </div>
+            <div class="money-protocol">
+                <div class="pr-content">
+                    <h4>京东钱包服务协议</h4>
+                    <p>本协议是您与京东网站（简称"本站"，网址：www.jd.com）所有者（以下简称为"京东"）之间就京东网站服务等相关事宜所订立的契约，请您仔细阅读本注册协议，您点击"同意并继续"按钮后，本协议即构成对双方有约束力的法律文件。</p>
+                </div>
+                <div class="pro-btn"><button>同意并接受</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="reg-footer" class="footer w">
+        <div class="foot-links">
+            <a href="#">关于我们</a>|
+            <a href="#">联系我们</a>|
+            <a href="#">人才招聘</a>|
+            <a href="#">商家入驻</a>|
+            <a href="#">广告服务</a>|
+            <a href="#">手机京东</a>|
+            <a href="#">友情链接</a>|
+            <a href="#">销售联盟</a>|
+            <a href="#">京东社区</a>|
+            <a href="#">京东公益</a>|
+            <a href="#">English Site</a>
+        </div>
+        <div class="copyright">Copyright © 2004-2016  京东JD.com 版权所有</div>
+    </div>
+    <a href="#" class="feadback"></a>
+</body>
+</html>

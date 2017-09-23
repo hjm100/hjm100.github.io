@@ -1,0 +1,92 @@
+<!--<!DOCTYPE html>-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>相册</title>
+    <script src="libs/jquery.js"></script>
+    <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="libs/fancybox/helpers/jquery.fancybox-buttons.css">
+    <link rel="stylesheet" href="libs\fancybox\helpers\jquery.fancybox-thumbs.css">
+    <script src="libs/fancybox/jquery.fancybox.js"></script>
+    <script src="libs/fancybox/helpers/jquery.fancybox-buttons.js"></script>
+    <script src="libs/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+   
+     <!--css异步加载:同时加载   js是同步加载:从上到下按照顺序加载-->
+    <style>
+      body{
+        background-color: #333;
+        width:100%;
+        height:100%;
+        margin: 0;
+        overflow: hidden;
+      }
+      /*id下的所有div样式选择法*/
+      #xc div{
+        width: 100px;
+        height: 100px;
+        border: 5px solid #fff;
+        /*border-block-start: 实线;
+        border-width: 宽高;
+        border-color: 颜色;*/
+        /*在同级下,下面的样式会覆盖掉上面的样式*/
+        border-bottom: 18px solid #fff;
+        /*过渡表示2D转换*/
+        transition: transform 0.5s;
+      }
+     #xc div a{
+       /*转换为块级元素,进行宽高的设计*/
+       display: block;
+       width: 100px;
+       height: 100px;
+       /*首行缩进*/
+       text-indent: -2000px;
+       /*截取溢出部分*/
+       overflow: hidden;
+     } 
+     /*当鼠标经过这个元素的时候*/
+     #xc div:hover{
+       /*!important最重要的,前面是惊叹词*/
+          transform: scale(1.5,1.5)!important;
+          /*定位元素有层级之分的,默认是那个标签靠下,哪个记忆居上显示,我们可以通过设置层级来更改显示顺序值越大越靠上显示.*/
+          z-index: 999;
+     }
+    </style>
+</head>
+<body>
+  <audio src="audio/2.mp3" autoplay loop></audio>
+    <main id="xc">
+        <!--行内样式的写法 分开写安全好维护-->
+        <div style="background-image:url(images/thumbs/0.jpg)"> <a href="images/0.jpg" rel="group">亲爱的宝宝，情人节鸿基向宝宝大人问好。宝宝大人万岁万岁万万岁！</a></div>
+        <div style="background-image:url(images/thumbs/1.jpg)"><a href="images/1.jpg" rel="group">鸿基要送给宝宝特殊的礼物宝宝一定要喜欢哈！</a></div>
+        <div style="background-image:url(images/thumbs/2.jpg)"><a href="images/2.jpg" rel="group">鸿基公务繁忙，宝宝上班辛苦了，亲爱的加油要快乐哈！</a></div>
+        <div style="background-image:url(images/thumbs/3.jpg)"><a href="images/3.jpg" rel="group">过去的几年里鸿基要带宝宝回忆甜蜜的瞬间，亲爱的你准备好了吗！</a></div>
+        <div style="background-image:url(images/thumbs/4.jpg)"><a href="images/4.jpg" rel="group">宝宝还记得为宝宝点歌，牵着宝宝的手走到最后！</a></div>
+        <div style="background-image:url(images/thumbs/5.jpg)"><a href="images/5.jpg" rel="group">那时的小鸿不懂事，只知道宝宝好才是鸿基好！</a></div>
+        <div style="background-image:url(images/thumbs/6.jpg)"><a href="images/6.jpg" rel="group">宝宝还记得鸿基那天天扰民不曾迟到的短信吗！</a></div>
+        <div style="background-image:url(images/thumbs/7.jpg)"><a href="images/7.jpg" rel="group">宝宝还记得图书馆鸿基送给宝宝走遍千里的手镯吗！</a></div>
+        <div style="background-image:url(images/thumbs/8.jpg)"><a href="images/8.jpg" rel="group">宝宝还记得我们一起放过的孔明灯吗！</a></div>
+        <div style="background-image:url(images/thumbs/9.jpg)"><a href="images/9.jpg" rel="group">宝宝还记得第一次去开封留给我们的阴影吗！不过多亏宝宝大人安排，鸿基没能露宿街头！</a></div>
+        <div style="background-image:url(images/thumbs/10.jpg)"><a href="images/10.jpg" rel="group">宝宝还记得始祖山一行，虽累但是很幸福吗！</a></div>
+        <div style="background-image:url(images/thumbs/11.jpg)"><a href="images/11.jpg" rel="group">宝宝还记得动物园里的大猩猩，小猴子，还有抱着宝宝的鸿基吗！</a></div>
+        <div style="background-image:url(images/thumbs/12.jpg)"><a href="images/12.jpg" rel="group">宝宝还记得一其学习一起奋斗，图书馆人山人海，我们席地而坐背代码吗！</a></div>
+        <div style="background-image:url(images/thumbs/13.jpg)"><a href="images/13.jpg" rel="group">宝宝还记得绿博园那对新人的幸福吗，风景无限好，宝宝真漂亮！</a></div>
+        <div style="background-image:url(images/thumbs/14.jpg)"><a href="images/14.jpg" rel="group">宝宝还记得洛阳一行，一群闺蜜赏牡丹，鸿基一人守空房吗！</a></div>
+        <div style="background-image:url(images/thumbs/15.jpg)"><a href="images/15.jpg" rel="group">宝宝还记得来自闺蜜的试探，鸿基真情流露，为宝宝许下的誓言吗！</a></div>
+         <div style="background-image:url(images/thumbs/16.jpg)"> <a href="images/16.jpg" rel="group">宝宝还记得人民公园过上车5D影院宝宝勇往直前吗！</a></div>
+        <div style="background-image:url(images/thumbs/17.jpg)"><a href="images/17.jpg" rel="group">宝宝还记得鸿基梦家政给我们带来的酸甜苦辣吗！</a></div>
+        <div style="background-image:url(images/thumbs/18.jpg)"><a href="images/18.jpg" rel="group">宝宝还记得鸿基惠州看海在此留下我们真情的思念吗！</a></div>
+        <div style="background-image:url(images/thumbs/19.jpg)"><a href="images/19.jpg" rel="group">回忆多多，真情实感，不能忘怀！</a></div>
+        <div style="background-image:url(images/thumbs/20.jpg)"><a href="images/20.jpg" rel="group">心中宝宝，七夕思念，惊喜不断！</a></div>
+        <div style="background-image:url(images/thumbs/21.jpg)"><a href="images/21.jpg" rel="group">许下诺言， 三生石畔，一生难忘！</a></div>
+        <div style="background-image:url(images/thumbs/22.jpg)"><a href="images/22.jpg" rel="group">鸿基思念，牵肠挂肚，思绪万千！</a></div>
+        <div style="background-image:url(images/thumbs/23.jpg)"><a href="images/23.jpg" rel="group">此时此景，玫瑰月光，相册奉上！</a></div>
+        <div style="background-image:url(images/thumbs/24.jpg)"><a href="images/24.jpg" rel="group">曾经的曾经，为宝宝绞尽脑汁，写下许多诗！</a></div>
+        <div style="background-image:url(images/thumbs/25.jpg)"><a href="images/25.jpg" rel="group">为宝宝写诗，此刻整理发现，已经很多了，空间留言，已经走过了两万五千里长征！</a></div>
+        <div style="background-image:url(images/thumbs/26.jpg)"><a href="images/26.jpg" rel="group">大风小浪有多少，激情不断才是好，此刻为你做相册，绞尽脑汁也是福！</a></div>
+        <div style="background-image:url(images/thumbs/27.jpg)"><a href="images/27.jpg" rel="group">一句诺言三生醉，为你饮下断肠散，悬崖勒马是英雄，一生独宠你一人！</a></div>
+        <div style="background-image:url(images/thumbs/28.jpg)"><a href="images/28.jpg" rel="group">最后献上鸿基的祝福：一定要雨露均沾看完鸿基的杰作，每一句都有深意，每一句都是为宝宝量身制作，愿宝宝开心快乐每一天，幸福美满全家福!
+        爱你的鸿基献上最美的祝福！亲爱的家一样的幸福！</a></div>
+        </main>
+</body>
+</html>
+<script src="index.js"> </script>

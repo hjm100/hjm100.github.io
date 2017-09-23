@@ -1,0 +1,337 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<title>狼图</title>
+<link rel="stylesheet" href="css/style_cn.css" />
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/queryloader2.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/weixin.js"></script>
+<script src="js/demo.js?v1"></script>
+</head>
+<body>
+
+<script>
+/*版本控制*/
+function freshUrl(){
+	var curUrl=window.location.href;
+	function timestamp(url){
+     //  var getTimestamp=Math.random();
+       var getTimestamp=new Date().getTime();
+      if(url.indexOf("timestamp=")>-1){
+		var timer=+new Date;
+        var index1=url.indexOf('timestamp=')+'timestamp='.length;
+		var index2=index1+13;
+		url=url.replace(url.substr(index1,index2),timer);
+      }else{
+        url=url+"?timestamp="+getTimestamp
+      }
+      return url;
+    }
+	if(curUrl.indexOf('timestamp=')!=-1){
+		var curTimer=+new Date;
+		var strIndex=curUrl.indexOf('timestamp=')+'timestamp='.length;
+		var timer=curUrl.substr(strIndex);
+		if(curTimer-timer>5000){
+			window.location.href=timestamp(curUrl);
+		}
+	}else{
+		window.location.href=timestamp(curUrl);
+	}
+}
+	freshUrl();
+
+
+</script>
+<div style="display:none">
+
+<input type="text" value="" id="whichId"> 
+</div>
+<div class="cont">
+	<div class="backText">
+    	<img class="back slideback" src="img/cn/back1.jpg?v1">
+        <div class="kuang">
+        	<img class="bpwolf" src="img/cn/benpao.gif">
+            <img class="headText" src="img/cn/hengf.png">
+            <div class="barCover"><img class="barCover" src="img/cn/bar1.png"></div>
+            
+        </div>
+    </div>
+
+	<!--<img id="ce" src="img/ce.png">
+    <img id="ee" src="img/ee.png">-->
+	<ul class="tab q">  
+    	<li id="wolfindex" class="tabc cur">
+        	<img class="back slideback" src="img/cn/back1.jpg">
+            <img class="zuhe1 zuheTran" src="img/cn/zuhe1.png">
+            <img class="zuhe2 zuheTran" src="img/cn/zuhe2.png">
+            <img class="wolfhead zuheTran" src="img/cn/wolfhead1.png">
+            <img class="slideh" src="img/cn/moveh1.png">
+            <img class="logo" src="img/cn/logo.jpg">
+        </li>
+        <li class="tabc" >
+        	<img class="back slideback" src="img/cn/back2.jpg">
+            <div class="tabc_div">
+            	<img class="wolfhead2" src="img/cn/wolfhead2.png" >
+                <img class="wolftit1" src="img/cn/wolftit.png">
+                <img class="btn1 btnwolf" src="img/cn/sbtn1.png">
+            </div>
+        </li>
+        <li class="tabc" >
+        	<div class="startClick"></div>
+            <img class="clickself" src="img/cn/clickself.png">
+        	<img class="back slideback" src="img/cn/back3.jpg">
+            <div class="tabc_div">
+            	<img class="wolfhead2" src="img/cn/wolfhead2.png" >
+                <img class="wolfq1" src="img/cn/wolfq1.png">
+                <img class="table1" src="img/cn/table1.gif">
+                <img class="btnwolf wolf1" src="img/cn/wolf1.png">
+                <img class="btnwolf wolf2" src="img/cn/wolf2.png">
+                <img class="btnwolf wolf3" src="img/cn/wolf3.png">
+                <img class="btnwolf wolf4" src="img/cn/wolf4.png">
+               
+                
+            </div>
+        </li>
+        <li class="tabc" >
+        	<img class="back slideback" src="img/cn/back4.jpg">
+            <div class="tabc_div">
+            	<img class="wolfhead2" src="img/cn/wolfhead2.png" >
+                <img class="wolfq1" src="img/cn/wolfq2.png">
+                <img class="table1" src="img/cn/table1.gif">
+                <img class="btnwolf wolf1" src="img/cn/wolf1_1.png">
+                <img class="btnwolf wolf2" src="img/cn/wolf1_2.png">
+                <img class="btnwolf wolf3" src="img/cn/wolf1_3.png">
+                <img class="btnwolf wolf4" src="img/cn/wolf1_4.png">
+            </div>
+        </li>
+        <li class="tabc">
+        	<img class="back slideback" src="img/cn/back5.jpg">
+            <div class="tabc_div">
+            	<img class="wolfhead2" src="img/cn/wolfhead2.png" >
+                <img class="wolfq1" src="img/cn/wolfq3.png">
+                <img class="table1" src="img/cn/table1.gif">
+                <img class="btnwolf wolf1" src="img/cn/wolf2_1.png">
+                <img class="btnwolf wolf2" src="img/cn/wolf2_2.png">
+                <img class="btnwolf wolf3" src="img/cn/wolf2_3.png">
+                <img class="btnwolf wolf4" src="img/cn/wolf2_4.png">
+            </div>
+        </li>
+        <li class="tabc">
+        	<img class="back slideback" src="img/cn/back6.jpg">
+            <div class="tabc_div">
+            	<img class="wolfhead2" src="img/cn/wolfhead2.png" >
+                <img class="wolfq1" src="img/cn/wolfq4.png">
+                <img class="table1" src="img/cn/table2.gif">
+                <img class="btnwolf wolf1" src="img/cn/wolf3_1.png">
+                <img class="btnwolf wolf2" src="img/cn/wolf3_2.png">
+                <img class="btnwolf wolf3" src="img/cn/wolf3_3.png">
+                <img class="btnwolf wolf4" src="img/cn/wolf3_4.png">
+            </div>
+            
+        </li>
+        <li class="tabc">
+        	<img class="back slideback" src="img/cn/back7.jpg">
+            <div class="tabc_div">
+            	<img class="wolfhead2" src="img/cn/wolfhead2.png" >
+                <img class="wolfq1" src="img/cn/wolfq5.png">
+                <img class="table2" src="img/cn/table3.gif">
+                <img class="btnwolf wolf1" src="img/cn/wolf4_1.png">
+                <img class="btnwolf wolf2" src="img/cn/wolf4_2.png">
+                <img class="btnwolf wolf3" src="img/cn/wolf4_3.png">
+                <img class="btnwolf wolf4" src="img/cn/wolf4_4.png">
+            </div>
+        </li>
+    </ul>
+    <div id="1" class="wycs">
+    	<img class="back slideback" src="img/cn/back1.jpg">
+        <div class="tabc_div">
+            <img class="anwolf" src="img/cn/anwolf1.png">
+            <div class="tright">
+                <img class="antext" src="img/cn/antext1.png">
+                <img class="antextt" src="img/cn/antextt1.png">
+                <img class="antextc" src="img/cn/antextc1.png">
+                <img class="wycsbtn callf" src="img/cn/callfriend.png">
+            </div>
+        </div>
+    </div>
+    <div id="2" class="wycs">
+    	<img class="back slideback" src="img/cn/back1.jpg">
+        <div class="tabc_div">
+            <img class="anwolf" src="img/cn/anwolf2.png">
+            <div class="tright">
+                <img class="antext" src="img/cn/antext2.png">
+                <img class="antextt" src="img/cn/antextt2.png">
+                <img class="antextc" src="img/cn/antextc2.png">
+                <img class="wycsbtn callf" src="img/cn/callfriend.png">
+            </div>
+        </div>
+    </div>
+    <div id="3" class="wycs">
+    	<img class="back slideback" src="img/cn/back1.jpg">
+        <div class="tabc_div">
+            <img class="anwolf" src="img/cn/anwolf3.png">
+            <div class="tright">
+                <img class="antext" src="img/cn/antext3.png">
+                <img class="antextt" src="img/cn/antextt3.png">
+                <img class="antextc" src="img/cn/antextc3.png">
+                <img class="wycsbtn callf" src="img/cn/callfriend.png">
+            </div>
+        </div>
+    </div>
+    <div id="4" class="wycs">
+    	<img class="back slideback" src="img/cn/back1.jpg">
+        <div class="tabc_div">
+            <img class="anwolf" src="img/cn/cattle.png">
+            <div class="tright">
+               
+                <img class="antextt" src="img/cn/sorry.png">
+                <div class="againOut">
+                	<img class="again" src="img/cn/again.png">
+                	<img class="again1 callf" src="img/cn/callfriend.png">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div id="1_" class="wycs">
+    	<img class="back slideback" src="img/cn/back1.jpg">
+        <div class="tabc_div">
+            <img class="anwolf" src="img/cn/anwolf1.png">
+            <div class="tright">
+                <img class="antext" src="img/cn/antext1.png">
+                <img class="antextt" src="img/cn/antextt1.png">
+                <img class="antextc" src="img/cn/antextc1.png">
+                <img class="wycsbtn fb" src="img/cn/sbtn2.png">
+            </div>
+        </div>
+    </div>
+    <div id="2_" class="wycs">
+    	<img class="back slideback" src="img/cn/back1.jpg">
+        <div class="tabc_div">
+            <img class="anwolf" src="img/cn/anwolf2.png">
+            <div class="tright">
+                <img class="antext" src="img/cn/antext2.png">
+                <img class="antextt" src="img/cn/antextt2.png">
+                <img class="antextc" src="img/cn/antextc2.png">
+                <img class="wycsbtn fb" src="img/cn/sbtn2.png">
+            </div>
+        </div>
+    </div>
+    <div id="3_" class="wycs">
+    	<img class="back slideback" src="img/cn/back1.jpg">
+        <div class="tabc_div">
+            <img class="anwolf" src="img/cn/anwolf3.png">
+            <div class="tright">
+                <img class="antext" src="img/cn/antext3.png">
+                <img class="antextt" src="img/cn/antextt3.png">
+                <img class="antextc" src="img/cn/antextc3.png">
+                <img class="wycsbtn fb" src="img/cn/sbtn2.png">
+            </div>
+        </div>
+    </div>
+    <div id="4_" class="wycs">
+    	<img class="back slideback" src="img/cn/back1.jpg">
+        <div class="tabc_div">
+            <img class="anwolf" src="img/cn/cattle.png">
+            <div class="tright">
+               
+                <img class="antextt" src="img/cn/sorry.png">
+                <div class="againOut">
+                	<img class="again1 fb" src="img/cn/sbtn2.png">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="startClick1"></div>
+    <img class="clickh" src="img/cn/clickhere.png">
+</div>
+<script>
+/*中英文切换*/
+	$(function(){
+		/*function ec(){
+			$('#ce').click(function(){
+				$(this).css({'z-index':'1','opacity':'0'});
+				$('#ee').css({'z-index':'2','opacity':'1'});
+				$('.tab img').each(function(index) {
+					var self_=$(this);
+                    self_.attr('src',self_.attr('src').replace('/cn/','/en/'));
+                });
+			});
+			$('#ee').click(function(){
+				$(this).css({'z-index':'1','opacity':'0'});
+				$('#ce').css({'z-index':'2','opacity':'1'});
+				$('.tab img').each(function(index) {
+					var self_=$(this);
+                    self_.attr('src',self_.attr('src').replace('/en/','/cn/'));
+                });
+			});
+		}
+		ec();	*/
+		/*屏幕适配*/
+		function screenChange(){
+			var $tabW=$('.tabc').width();
+			var $tabH=$('.tabc').height();
+			if($tabW>$tabH&&$tabW/$tabH>2){
+				$('.tabc_div').css({'width':'68%','left':'16%'});
+				$('.wolfhead').css({'width':'44%','left':'28%'});
+			}else if($tabH>$tabW&&$tabH/$tabW>2){
+				$('.tabc_div').css({'width':'68%','left':'16%'});
+				$('.wolfhead').css({'width':'44%','left':'28%'});
+			}else if($tabW>$tabH&&$tabW/$tabH>568/320){
+				$('.tabc_div').css({'width':'74%','left':'11%'});
+			}else if($tabH>$tabW&&$tabH/$tabW>568/320){
+				$('.tabc_div').css({'width':'74%','left':'11%'});
+			}else{
+				$('.tabc_div').css({'width':'85%','left':'7%'});
+				$('.wolfhead').css({'width':'50%','left':'25%'});
+			}
+			
+			if($('body').attr('hs')==0)
+				$('.clickh').removeClass('clickh').addClass('clickh1');
+			else
+				$('.clickh1').removeClass('clickh1').addClass('clickh');
+		}
+		screenChange();
+		window.addEventListener('resize',screenChange);
+	});
+	
+    var a = location.href.split('#')[0];
+	$.ajax({
+		url: './wechat.php',
+		type: 'POST',
+		dataType: 'json',
+	    data: {url: a},
+		complete: function(xhr, textStatus) {
+			//called when complete
+		},
+		success: function(json) {
+			main(json)
+		},
+		error: function(json) {}
+	});
+
+
+	function main(json) {
+		wx.config({
+			debug: false,
+			appId: 'wxc7e7261cb4370370',
+			timestamp: json.timestamp,
+			nonceStr: json.noncestr,
+			signature: json.signature,
+			jsApiList: [
+				'checkJsApi',  
+				'onMenuShareTimeline',
+				'onMenuShareAppMessage',
+				'onMenuShareQQ',
+				'onMenuShareWeibo'
+			]
+		});
+	}
+</script>
+</body>
+</html>

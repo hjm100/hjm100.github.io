@@ -1,0 +1,29 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+ <meta charset="UTF-8"> 
+<title>抓取访客的用户信息</title>  
+  
+<script src="js/jquery.js"></script>  
+<script language="javascript" type="text/javascript">  
+$(document).ready(function(){  
+    $("#a").click(function(){  
+        var url = 'http://chaxun.1616.net/s.php?type=ip&output=json&callback=?&_='+Math.random();   
+        console.log(url) 
+        $.getJSON(url, function(data){  
+            console.log(data)
+            $("#b").html("显示：IP【"+data.Ip+"】 地址【"+data.Isp+"】 浏览器【"+data.Browser+"】 系统【"+data.OS+"】");  
+        });   
+    });  
+});  
+</script>  
+</head>  
+<body>  
+    <a href="http://www.hjmeng.cn" target="_blank" style="margin-left:100px;"><span id="a" style="color: #000;font-size:40px;border:#000 0px solid;">点我访问鸿基梦</span></a>  
+    <br/>  
+    <br/>  
+    <br/>  
+    <br/>  
+    <span id="b" style="color: #000;font-size:40px;border:#000 0px solid;">显示：点击上方文字显示ip详情！</span>  
+</body>  
+</html>  

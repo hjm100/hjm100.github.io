@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>京东-登录</title>
+    <link href="images/icon.png" rel="shortcut icon" type="image/png"/>
+    <meta name="description" content="京东JD.COM-专业的综合网上购物商城,销售家电、数码通讯、电脑、家居百货、服装服饰、母婴、图书、食品等数万个品牌优质商品.便捷、诚信的服务，为您提供愉悦的网上购物体验!">
+    <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东">
+    <link rel="stylesheet" href="css/login.css"/>
+    <script src="libs/jquery-3.1.0.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <div class="w"><div class="logo"><a href="http://hjmeng.cn/liulan/jd"><img src="images/logo-b.png" alt=""></a><b></b></div></div>
+    <div class="content">
+        <div class="login-wrap">
+            <div class="w">
+                <div class="login-form">
+                    <div class="login-tab login-sweep"><a href="#">扫码登录</a></div>
+                    <div class="login-tab login-account"><a href="#">账户登录</a></div>
+
+                    <!--账户登录-->
+                    <div class="login-box" style="display: none;">
+                        <div class="mt box-h"></div>
+                        <div class="msg-wrap">
+                            <div class="msg-warn"><b></b>公共场所不建议自动登录,以防账号丢失</div>
+                            <div class="msg-error hide" style="display: none"><b></b></div>
+                        </div>
+                        <div class="mc">
+                            <div class="form">
+                                <form action="/user" method="post">
+                                <div class="user item">
+                                    <label class="name-label login-label" for=""></label>
+                                    <input type="text" class="itxt" name="username" autocomplete="off" placeholder="邮箱/用户名/已验证手机" value="">
+                                    <span class="clear-btn"></span>
+                                </div>
+                                <div class="pasword item">
+                                    <label class="pas-label login-label" for=""></label>
+                                    <input type="password"name="password" class="itxt" autocomplete="off" placeholder="密码" value="">
+                                    <span class="clear-btn"></span>
+                                </div>
+                                <div class="item forget">
+                                    <div class="safe">
+                                        <span><input type="checkbox" class="jd-checkbox" tabindex="3" id="autoLogin"><label for="">自动登录</label></span>
+                                        <span class="safe-right"><a href="#">忘记密码</a></span>
+                                    </div>
+                                </div>
+                                <div class="code item">
+                                    <input type="text" class="itxt" id="logincode" name="logincode">
+                                    <img class="code-img" src="" alt="">
+                                    <a href="#">看不清楚换一张</a>
+                                </div>
+                                <div class="button item">
+                                    <div class="login-button"><a class="btn-img" href="#">登&nbsp&nbsp录</a></div>
+                                </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coagent">
+                        <ul>
+                            <li><a href="#">京东钱包</a><span class="line">|</span></li>
+                            <li><a href="#">QQ</a><span class="line">|</span></li>
+                            <li><a href="#">微信</a></li>
+                            <li class="extra-r"><div class="regist-link"><a href="#"><b></b>立即注册</a></li>
+                        </ul>
+                    </div>
+
+                <!--扫码登录-->
+
+                    <div class="qrcode-login">
+                        <div class="mc">
+                            <div class="qrcode-error">
+                                <div class="qrcode-error-mask"></div>
+                                <p class="err-cont">二维码已失效</p>
+                                <a href="#" class="refresh-btn">刷新</a>
+                            </div>
+                            <div class="qrcode-main">
+                                <div class="qrcode-img">
+                                    <img src="images/qr" alt="">
+                                    <div class="qrcode-error02">
+                                        <a href="#">
+                                            <span class="error-icon"></span>
+                                            <div class="txt">网络开小差咯<span class="m110">刷新二维码</span></div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="qrcode-help"></div>
+                            </div>
+                            <div class="qrcode-panel">
+                                <ul>
+                                    <li class="fore1"><a href="#">打开新版<span class="red">手机京东</span>,扫描二维码</a></li>
+                                    <li class="panel-line"></li>
+                                    <li><a href="#">使用帮助</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qrCoagent coagent" style="display: block;">
+                        <ul>
+                            <li><b></b><em>免输入</em></li>
+                            <li><b style="background-position: -27px;"></b><em>更快</em></li>
+                            <li><b style="background-position: -54px;"></b><em>更安全</em></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="login-banner"><div class="w"><div class="banner-bg"></div></div></div>
+        </div>
+    </div>
+    <div class="w ar"><a href="#" class="q-link"><b></b>登录页面,点差问卷</a></div>
+    <div id="login-footer" class="w footer">
+        <div class="foot-links">
+            <a href="#">关于我们</a>|
+            <a href="#">联系我们</a>|
+            <a href="#">人才招聘</a>|
+            <a href="#">商家入驻</a>|
+            <a href="#">广告服务</a>|
+            <a href="#">手机京东</a>|
+            <a href="#">友情链接</a>|
+            <a href="#">销售联盟</a>|
+            <a href="#">京东社区</a>|
+            <a href="#">京东公益</a>|
+            <a href="#">English Site</a>
+        </div>
+        <div class="copyright">Copyright © 2004-2016  京东JD.com 版权所有</div>
+    </div>
+</body>
+</html>

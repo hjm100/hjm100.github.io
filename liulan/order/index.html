@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title></title>
+		<script src="js/vue.js"></script>
+		<link rel="stylesheet" href="css/index.css">
+	</head>
+
+	<body>
+		<header class="header">
+			菜单
+		</header>
+		<main id="foodList">
+			<div class="item" v-for="food in foodList">
+				<div class="imgbox"><img v-bind:src="food.img"></div>
+				<div class="textbox">
+					<span class="foodName">{{food.name}}</span><span class="foodPrice">￥{{food.price}}</span>
+					<input type="number" min="0" v-model="food.number" v-on:change="computTotal()" /> 份
+				</div>
+			</div>
+			<div></div>
+		</main>
+		<footer>
+			<span>金额：{{total}}</span>&nbsp;<input type="button" v-on:click="pay" value="结算"/>
+		</footer>
+	</body>
+	<script>
+	window.onload=function(){
+		var foodList = [{
+			name: "黄焖鸡米饭",
+			price: 10,
+			img: "img/rice.jpg",
+			number: 0
+		}, {
+			name: "黄焖鸡米饭",
+			price: 20,
+			img: "img/rice.jpg",
+			number: 0
+		}, {
+			name: "黄焖鸡米饭",
+			price: 30,
+			img: "img/rice.jpg",
+			number: 0
+		}, {
+			name: "黄焖鸡米饭",
+			price: 10,
+			img: "img/rice.jpg",
+			number: 0
+		}, {
+			name: "黄焖鸡米饭",
+			price: 25,
+			img: "img/rice.jpg",
+			number: 0
+		}, ]
+
+		var vm1 = new Vue({
+			el: "#foodList",
+			data: {
+				foodList: foodList,
+				total: 0
+			},
+			methods: {
+				computTotal: function() {
+					var t = 0
+					for(var i = 0; i < this.foodList.length; i++) {
+						t += this.foodList[i].price * this.foodList[i].number
+						console.log(this.foodList[i].price)
+						console.log(this.foodList[i].number)
+					}
+					this.total = t
+					console.log(t)
+				}
+			},
+			watch: {
+				// 监听vm1中total值得变化，变化后将其赋值给vm2中的total
+				total: function(val) {
+					console.log(val)
+					// 让vm2的total等于val
+					vm2.total = val
+				}
+			}
+		})
+		var vm2 = new Vue({
+			el: "footer",
+			data: {
+				total: 0
+			},
+			methods:{
+				pay:function(){
+					// 此处的this指的是vm2
+					var money = this.total
+					console.log(money)
+					confirm('您需要支付的金额是：'+money)
+				}
+			}
+		})
+
+	}
+	</script>
+</html>

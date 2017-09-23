@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>花花世界</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<div class="logo"><a href="index.html"><img src="images/logo.gif" alt="" title="" border="0" /></a></div>
+		<menu>
+			<ul>
+				<li class="selected"><a href="index.html">首页</a></li>
+				<li><a href="about.html">关于我们</a></li>
+				<li><a href="category.html">鲜花</a></li>
+				<li><a href="specials.html">节日之花</a></li>
+				<li><a href="myaccount.html">我的账户</a></li>
+				<li><a href="register.html">注册用户</a></li>
+				<li><a href="myposition.html">我的位置</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+		</menu>
+	</header>
+	<div class="center_content">
+		<div class="left_content">
+			<div class="title"><span class="title_icon"><img src="images/bullet1.gif" alt="" title="" /></span>Special gifts</div>
+			<div class="feat_prod_box">
+				<div class="prod_img"><a href="details.html"><img src="images/prod1.gif" alt="" title="" border="0" /></a></div>
+				<div class="prod_det_box"> <span class="special_icon"><img src="images/special_icon.gif" alt="" title="" /></span>
+					<div class="box_top"></div>
+					<div class="box_center">
+						<div class="prod_title">Product name</div>
+						<p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						<a href="details.html" class="more">- more details -</a>
+						<div class="clear"></div>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="feat_prod_box">
+				<div class="prod_img"><a href="details.html"><img src="images/prod2.gif" alt="" title="" border="0" /></a></div>
+				<div class="prod_det_box"> <span class="special_icon"><img src="images/special_icon.gif" alt="" title="" /></span>
+					<div class="box_top"></div>
+					<div class="box_center">
+						<div class="prod_title">Product name</div>
+						<p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						<a href="details.html" class="more">- more details -</a>
+						<div class="clear"></div>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="feat_prod_box">
+				<div class="prod_img"><a href="details.html"><img src="images/prod1.gif" alt="" title="" border="0" /></a></div>
+				<div class="prod_det_box"> <span class="special_icon"><img src="images/special_icon.gif" alt="" title="" /></span>
+					<div class="box_top"></div>
+					<div class="box_center">
+						<div class="prod_title">Product name</div>
+						<p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						<a href="details.html" class="more">- more details -</a>
+						<div class="clear"></div>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="feat_prod_box">
+				<div class="prod_img"><a href="details.html"><img src="images/prod2.gif" alt="" title="" border="0" /></a></div>
+				<div class="prod_det_box"> <span class="special_icon"><img src="images/special_icon.gif" alt="" title="" /></span>
+					<div class="box_top"></div>
+					<div class="box_center">
+						<div class="prod_title">Product name</div>
+						<p class="details">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+						<a href="details.html" class="more">- more details -</a>
+						<div class="clear"></div>
+					</div>
+					<div class="box_bottom"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="pagination"> <span class="disabled"><<</span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=199">10</a><a href="#?page=200">11</a><a href="#?page=2">>></a> </div>
+			<div class="clear"></div>
+		</div>
+		<!--end of left content-->
+		<script>
+		function ckColor(color,id)
+		{
+			document.body.style.backgroundColor = color;
+			document.body.style.WebkitTransition = "background 5s linear 0.5s";
+			for(var i=0;i<4;i++)
+			{
+				if(i==id)
+					document.getElementById("c"+id).className = "selected";	
+				else
+					document.getElementById("c"+i).className = "";				
+			}
+		}
+		</script>
+		<div class="right_content">
+			<nav>
+				<span class="red">当前背景色: </span>
+				<a href="#" id="c0" onClick="ckColor('silver','0')" class="selected">silver</a>
+				<a href="#" id="c1" onClick="ckColor('red','1')">red</a> 
+				<a href="#" id="c2" onClick="ckColor('green','2')">green</a> 
+				<a href="#" id="c3" onClick="ckColor('blue','3')">blue</a>
+			</nav>
+			<div class="cart">
+				<div class="title"><span class="title_icon"><img src="images/cart.gif" alt="" title="" /></span>我的购物车</div>
+				<div class="home_cart_content"> 0 件商品 | <span class="red">总价: ￥0.00</span> </div>
+				<a href="cart.html" class="view_cart">查看</a> </div>
+			<div class="title"><span class="title_icon"><img src="images/bullet3.gif" alt="" title="" /></span>关于我们</div>
+			<div class="about">
+				<p> <img src="images/about.gif" alt="" title="" class="right" /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;花花世界礼品网简称<mark>鲜花</mark>网，中国领先的<mark>鲜花</mark>礼品速递服务商，由深圳市的一家有限公司于2008年投资创办，自成立以来一直保持高速成长，连续四年增长率均超过100%，现已成长为中国乃至世界最具影响力的<mark>鲜花</mark>礼品网站，其所售<mark>鲜花</mark>排名稳居同类网站第一名，市场占有率已连续3年居中国<mark>鲜花</mark>速递行业第一位。</p>
+			</div>
+			<div class="right_box">
+				<div class="title"><span class="title_icon"><img src="images/bullet4.gif" alt="" title="" /></span>特价商品</div>
+				
+				<div class="new_prod_box"> <a href="details.html">一个好梦</a>
+					<div class="new_prod_bg"> <span class="new_icon"><img src="images/promo_icon.gif" alt="" title="" /></span> <a href="details.html"><img src="images/price_1.jpg" width="88" height="96" alt="" title="" class="thumb" border="0" /></a> </div>
+				</div>
+				
+				<div class="new_prod_box"> <a href="details.html">母爱至深</a>
+					<div class="new_prod_bg"> <span class="new_icon"><img src="images/promo_icon.gif" alt="" title="" /></span> <a href="details.html"><img src="images/price_2.jpg" width="96" height="98" alt="" title="" class="thumb" border="0" /></a> </div>
+				</div>
+				<div class="new_prod_box"> <a href="details.html">火红的祝福</a>
+					<div class="new_prod_bg"> <span class="new_icon"><img src="images/promo_icon.gif" alt="" title="" /></span> <a href="details.html"><img src="images/price_3.jpg" width="112" height="100" alt="" title="" class="thumb" border="0" /></a> </div>
+				</div>
+			</div>
+			<div class="detail">
+				<summary>
+					<div class="title"><span class="title_icon"><img src="images/bullet5.gif" alt="" title="" /></span>鲜花分类</div>
+				</summary>
+				<ul class="list">
+					<li><a href="#">情侣蛋糕</a></li>
+					<li><a href="#">生日之花</a></li>
+					<li><a href="#">节日之花</a></li>
+					<li><a href="#">对象之花</a></li>
+					<li><a href="#">花的私语</a></li>
+					<li><a href="#">特价之花</a></li>
+					<li><a href="#">珍贵之花</a></li>
+					<li><a href="#">节日礼物</a></li>
+					<li><a href="#">装饰之花</a></li>
+				</ul>
+			</div>
+			<div class="detail">
+				<summary>
+					<div class="title"><span class="title_icon"><img src="images/bullet6.gif" alt="" title="" /></span>礼物专区</div>
+				</summary>
+				<ul class="list">
+					<li><a href="#">品牌巧克力</a></li>
+					<li><a href="#">巧克力花篮</a></li>
+					<li><a href="#">普通蛋糕花束</a></li>
+					<li><a href="#">生日祝福</a></li>
+					<li><a href="#">鲜奶蛋糕</a></li>
+					<li><a href="#">卡通玩偶</a></li>
+					<li><a href="#">卡通花束</a></li>
+					<li><a href="#">商务花篮</a></li>
+					<li><a href="#">时尚果篮</a></li>
+				</ul>
+			</div>
+		</div>
+		<!--end of right content-->
+		
+		<div class="clear"></div>
+	</div>
+	<!--end of center content-->
+	
+	<footer>
+		<div class="left_footer"><img src="images/footer_logo.gif" alt="" title="" /><br />
+			<a href="http://csscreme.com"><img src="images/csscreme.gif" alt="by csscreme.com" title="by csscreme.com" border="0" /></a></div>
+		<div class="right_footer"> <a href="#">首页</a> <a href="#">关于我们</a> <a href="#">服务</a> <a href="#">个人代理</a> <a href="#">联系我们</a> </div>
+	</footer>
+</div>
+</body>
+</html>

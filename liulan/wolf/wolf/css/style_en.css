@@ -1,0 +1,17 @@
+﻿html,body,div,span,p,dl,dt,dd,ul,ol,li,table,thead,tbody,tfoot,tr,th,td,h1,h2,h3,h4,h5,h6,img,a,strong,form,fieldset,input,textarea,select,lable,option,blockquote,pre{margin:0; padding:0}
+	table{border-collapse:collapse;border-spacing:0}
+	ol,ul,li{list-style:none}
+	a{text-decoration:none; color:#000;}
+	a:hover{text-decoration:underline; color:#f00;}
+	img{border:none;display:block;}
+	em,i{font-style:normal;}
+	button{ background:none;border:none;}
+	.q:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;line-height:0;}
+	.q{zoom:1}
+	html,body{height:100%;font-size:62.5%; font-family:"微软雅黑"; color:#666666; }
+	
+.cont{width:100%;overflow:hidden;position:relative;font-size:18px;}
+.tab{width:600%;position:absolute;left:0;}
+.tabc{width:16.6666666666%;float:left;}
+.tranLeft1{transition:left .3s ease-in-out;-webkit-transition:left .3s ease-in-out;}
+.whichlan{position:absolute;right:10px;top:10px;z-index:3;}

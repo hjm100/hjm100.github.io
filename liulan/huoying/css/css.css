@@ -1,0 +1,14 @@
+@charset "gb2312";
+/* CSS Document */
+body{ padding:0px; margin:0px; background:url(../images/cont.jpg) repeat; font-size:12px;}
+img{ border:none}
+.menu{ background:#886640; color:#FFF; font-size:14px;}
+a{ color:#333;text-decoration:none;}
+a:hover{ color:#F00;text-decoration:none;}
+.menu td a,.menu td a:hover{ color:#FFF; text-decoration:none;}
+.menu td:hover{ background:#987b5a;}
+.lh24{ line-height:24px;}
+.STYLE2{background:url(../images/bgc.jpg) no-repeat; text-indent:25px; font-size:14px; color:#4b0a08; font-weight:bold;}
+.cb{ color:#FFF; font-size:14px;}
+.zf td{ border-bottom:#CCC 1px dotted;}
+.zx td{ border-bottom:#CCC 1px dashed;}
