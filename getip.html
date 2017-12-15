@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>JS获取手机型号和系统</title>
+    <!-- 移动detect.js设备检测（手机，平板电脑，台式机，手机级，操作系统，版本） -->
+    <!-- 详细信息请访问https://hgoebl.github.io/mobile-detect.js/ -->
+    <script src="//cdn.jsdelivr.net/npm/mobile-detect@1.4.0/mobile-detect.min.js"></script>
+    <!-- 获取用户ip地址使用的是搜狐接口 -->
+    <script type="text/javascript" src="http://pv.sohu.com/cityjson?ie=utf-8" charset="gb2312"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system-font, Helvetica Neue, Helvetica, sans-serif;
+        }
+
+        li {
+            list-style: none;
+            font-size: 14px;
+        }
+
+        a {
+            color: #f00;
+            text-decoration: none;
+        }
+
+        .btn a:hover {
+            color: #00f;
+        }
+
+        .page {
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+            z-index: 1;
+        }
+
+        .page__hd {
+            padding: 40px;
+        }
+
+        .page__title {
+            text-align: left;
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        .page__desc {
+            margin-top: 5px;
+            color: #888;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        .hjm-article,
+        .btn {
+            padding: 20px 15px;
+            font-size: 15px;
+        }
+
+        .hjm-article * {
+            max-width: 100%;
+            box-sizing: border-box;
+            word-wrap: break-word;
+        }
+
+        .hjm-article h1 {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: .9em;
+        }
+
+        .hjm-article section {
+            margin-bottom: 1.5em;
+        }
+
+        .hjm-article h2 {
+            font-size: 16px;
+            font-weight: 400;
+            margin-bottom: .34em;
+        }
+
+        .hjm-article section {
+            margin-bottom: 1.5em;
+        }
+
+        .hjm-article h3 {
+            font-weight: 400;
+            font-size: 15px;
+            margin-bottom: .34em;
+        }
+
+        .hjm-article p {
+            margin: 0 0 .8em;
+            line-height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="page article">
+        <div class="page__bd">
+            <article class="hjm-article">
+                <h1>JS获取用户设备信息</h1>
+                <section>
+                    <section>
+                        <h3>1.1 机型信息</h3>
+                        <ul id="type">
+                            <li>系统出错请稍后重试，</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h3>1.2 机型详情</h3>
+                        <p id="typedes">
+                            系统出错请稍后重试，
+                        </p>
+                    </section>
+                    <section>
+                        <h3>1.3 网络信息</h3>
+                        <ul id="network">
+                            <li>系统出错请稍后重试，</li>
+                        </ul>
+                    </section>
+                </section>
+            </article>
+            <div class="btn">
+                <a href="http://www.ip.cn/">查看ip网络信息</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var type = document.getElementById('type'),
+            typedes = document.getElementById('typedes'),
+            network = document.getElementById('network');
+        //判断数组中是否包含某字符串
+        Array.prototype.contains = function (needle) {
+            for (i in this) {
+                if (this[i].indexOf(needle) > 0) return i;
+            }
+            return -1;
+        }
+        var device_type = navigator.userAgent; //获取userAgent信息
+        console.log(device_type)
+        //设备详细信息
+        typedes.innerHTML = device_type;
+        var md = new MobileDetect(device_type); //初始化mobile-detect
+        //获取系统
+        var os = md.os();
+        var model = "";
+        if (os == "iOS") { //ios系统的处理
+            os = md.os() + md.version("iPhone");
+            model = md.mobile();
+        } else if (os == "AndroidOS") { //Android系统的处理
+            os = md.os() + md.version("Android");
+            var sss = device_type.split(";");
+            var i = sss.contains("Build/");
+            if (i > -1) {
+                model = sss[i].substring(0, sss[i].indexOf("Build/"));
+            }
+        } else {
+            os = '我们只计算移动端'
+            model = '我们只考虑pc端'
+        }
+        console.log(os + "---" + model); //打印系统版本和手机型号
+        type.innerHTML = '<li>系统版本：' + os + '</li><li>设备型号：' + model + '</li>'
+        console.log(returnCitySN)
+        network.innerHTML = '<li>ip：' + returnCitySN["cip"] + '</li><li>网络所在地：' + returnCitySN["cname"] + '</li>';
+    </script>
+</body>
+
+</html>
