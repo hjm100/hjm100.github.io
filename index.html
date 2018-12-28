@@ -20,10 +20,26 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script>
+        // 获取浏览器参数
+        function getQueryString(name) {
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+        var baidu = [
+            'https://hm.baidu.com/hm.js?5c85e2b466ce35ca81f8b0719817928d', //检测零
+            'https://hm.baidu.com/hm.js?5f0b70ece56e9d1b85468e41e2eaba46', // 检测一
+            'https://hm.baidu.com/hm.js?37c6eddfa3270f33d12267e877c1f545'  // 检测二
+        ]
         var _hmt = _hmt || [];
         (function() {
+            //获取到参数：
+            var type = getQueryString('type')||0   //如果没有的话默认选择第一个
             var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?5c85e2b466ce35ca81f8b0719817928d";
+            hm.src = baidu[type];
             var s = document.getElementsByTagName("script")[0]; 
             s.parentNode.insertBefore(hm, s);
         })();
