@@ -70,7 +70,7 @@ button:focus { outline: none;border-bottom: 1px solid rgba(255,255,255,0.3);}
 
 .navbar-nav .nav-link {
 	text-align: center;
-	color: black;
+	color: #fff;
     /*display: table-cell;*/
     font-weight: 400;
     font-size: 1em;
