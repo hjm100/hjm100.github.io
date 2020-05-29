@@ -23,8 +23,10 @@
 <script>
 (function ($) {
 	$(window).ready(function() { 
-		$("#status").fadeOut(); // will first fade out the loading animation
-		$("#preloader").delay(100).fadeOut("medium"); // will fade out the white DIV that covers the website.
+		$(window).load(function(){  //load函数
+			$("#status").fadeOut(); // will first fade out the loading animation
+			$("#preloader").delay(100).fadeOut("medium"); // will fade out the white DIV that covers the website.
+    });
 	});
 }(jQuery));
 </script>
@@ -53,7 +55,7 @@
 			<h4 class="agile">1254158627</h4>
 			<!--<h4 class="agile">+18336399012</h4>-->
 			<h4 class="agile">+18612908099</h4>
-			<h4>河南省 南阳市 南召县</h4>
+			<h4>北京市 昌平区 霍营</h4>
 		</div>
 		<div class="col-md-3 b-part3">
 			<h3>关注我</h3>
@@ -100,25 +102,29 @@
 		<label class="line"></label>
 			<div class="col-md-6 skills-left">
 				<h4>技 能 简 介</h4>
-				<p>1. 研究学习web相关技术三年，精通HTML5、CSS3、JavaScript及常用前端框架，有多个Web项目和WebAPP以及微信公众号项目研发经验。</p>
-				<p>2. 熟练掌握代码在不同平台、浏览器或客户端下的兼容性调整。</p> 	
-				<p>3. 精通jQuery等库或插件，熟练使用AngularJS，vue（常用），react等应用框架，熟练使用Bootstrap，weui，vant等UI框架，熟练使用webpack打包工具。</p>
-				<p>4. 熟练与Nodejs和PHP后端对接，业余研究过node.js以及MongoDB，mySQL数据库操作</p>
-				<p>5. 熟练掌握Photoshop等图形编辑软件，并能够根据UI提供的设计图完成页面切图。</p>
-				<p>6. 熟悉Es6编程，能够使用sass，和TypeScript编程。</p> 
-				<p>7. 熟练使用Dreamware、Sublime Text、HBuilder、VS Code（常用）、WebStorm等相关开发工具，Git以及SVN源码管理工具，能熟练的阅读技术文档。</p>
-				<p>8.自行搭建过前端脚手架（开发过基于vue的单页面或多页面脚手架）支持npm安装使用 npm i hjm-web-staging。</p>
+				<p>1. 精通HTML5、CSS3、JavaScript及常用前端框架，有多个Web项目和WebAPP以及微信公众号项目研发经验;</p>
+				<p>2. 熟练掌握代码在不同平台、浏览器或客户端下的兼容性调整;</p> 	
+				<p>3. 精通jQuery等库或插件，熟练使用AngularJS,Vue（常用）,React等应用框架,熟练使用Bootstrap，element-ui等UI框架;</p>
+				<p>4. 熟练微信小程序开发(使用Taro)开发过多个小程序项目;</p>
+				<p>5. 熟练使用webpack打包工具,以及前端打包性能优化;</p>
+				<p>6. 熟练与Node.js,PHP, java后端对接，业余研究过Node.js以及MongoDB，mySQL数据库操作;</p> 
+				<p>7. 熟练掌握Photoshop等图形编辑软件，并能够根据UI提供的设计图完成页面切图;</p>
+				<p>8. 熟悉Es6编程，能够使用sass，和TypeScript编程;</p>
+				<p>9. 熟练使用VS Code（常用）、WebStorm等开发工具，Git以及SVN源码管理工具，能熟练的阅读技术文档;</p>
+				<p>10. 自行搭建过前端脚手架（开发过基于Vue的单页面或多页面脚手架）支持npm安装使用 npm i hjm-web-staging;</p>
+				<p>11. 业余时间喜欢并满足于钻研技术使用github+hexo搭建个人博客，以及使用HBuilder打包过app;</p>
 			</div>
 			<div class="col-md-6 skills-right">
 				<div class="bar_group">
-					<div class='bar_group__bar thin' label='HTML' show_values='true' tooltip='true' value='100'></div>
-					<div class='bar_group__bar thin' label='CSS' show_values='true' tooltip='true' value='100'></div>
+					<div class='bar_group__bar thin' label='HTML' show_values='true' tooltip='true' value='90'></div>
+					<div class='bar_group__bar thin' label='CSS' show_values='true' tooltip='true' value='90'></div>
 					<div class='bar_group__bar thin' label='JavaScript/JQuery' show_values='true' tooltip='true' value='80.0'></div>
 					<div class='bar_group__bar thin' label='Angular' show_values='true' tooltip='true' value='60.0'></div>
 					<div class='bar_group__bar thin' label='VUE' show_values='true' tooltip='true' value='80.0'></div>
-					<div class='bar_group__bar thin' label='react' show_values='true' tooltip='true' value='60.0'></div>
-					<div class='bar_group__bar thin' label='webpack' show_values='true' tooltip='true' value='60.0'></div>
-					<div class='bar_group__bar thin' label='ionic' show_values='true' tooltip='true' value='77.0'></div>
+					<div class='bar_group__bar thin' label='react' show_values='true' tooltip='true' value='70.0'></div>
+					<div class='bar_group__bar thin' label='webpack' show_values='true' tooltip='true' value='70.0'></div>
+					<div class='bar_group__bar thin' label='微信小程序' show_values='true' tooltip='true' value='77.0'></div>
+					<div class='bar_group__bar thin' label='Taro' show_values='true' tooltip='true' value='70.0'></div>
 					<div class='bar_group__bar thin' label='node.js/MongoDB' show_values='true' tooltip='true' value='60.0'></div>
 				</div>
 				<script src="../js/bars.js"></script>
@@ -417,46 +423,69 @@
 			<div class="blog-grids">
 				<div class="col-md-6 blog-right">
 					<div class="col-md-3 agile1">
-						<h5>20</h5>
-						<h6>2月-2017 <small>入职</small></h6>
+						<h5>1</h5>
+						<h6>5月-2019 <small>入职</small></h6>
 						<h5>web</h5>
 						<h6 class="spcl">前端工程师</h6>
-						<h5>至今</h5>
-						<h6 class="spcl">**-2019 <small>在职</small></h6>
+						<h5>*</h5>
+						<h6 class="spcl">***-2020 <small>在职</small></h6>
 					</div>
 					<div class="col-md-9 agile2">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="../images/b1.jpg" alt="" /></a>
-						<a href="#" data-toggle="modal" data-target="#myModal"><h4>乐牌（北京）网络技术有限公司</h4></a>
+						<a href="#" data-toggle="modal" data-target="#myModal"><img src="../images/b2.jpg" alt="" /></a>
+						<a href="#" data-toggle="modal" data-target="#myModal"><h4>易企嗨（北京）网络科技有限公司</h4></a>
+						<p>行业类别：移动互联网/企业服务 | 企业性质：民营</p>
+						<p>公司简介：易企嗨（北京）网络科技有限公司创立的新零售品牌特别喵办公室商品货架将互联网+、大数据、新零售等多种概念进行整合依托国有大型集团公司的网点及资源优势，打造高效标准化的服务体系。</p>
+						<p>公司地址：北京市海淀区温泉镇太舟坞桥北中关村创客小镇南门16号楼二层206室（易企嗨）</p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="col-md-6 blog-right">
+					<div class="col-md-3 agile1">
+						<h5>20</h5>
+						<h6>9月-2017 <small>入职</small></h6>
+						<h5>web</h5>
+						<h6 class="spcl">前端工程师</h6>
+						<h5>30</h5>
+						<h6 class="spcl">4月-2019 <small>离职</small></h6>
+					</div>
+					<div class="col-md-9 agile2">
+						<a href="#" data-toggle="modal" data-target="#myModal2"><img src="../images/b1.jpg" alt="" /></a>
+						<a href="#" data-toggle="modal" data-target="#myModal2"><h4>乐牌（北京）网络技术有限公司</h4></a>
 						<p>行业类别：互联网/游戏 | 企业性质：民营</p>
 						<p>主营业务：致力于棋牌游戏研发的互联网技术公司。</p>
 						<p>公司地址：北京市海淀区西北旺东路10号院东区1号楼2层210-1</p>
 					</div>
 					<div class="clearfix"></div>				
 				</div>
-				<div class="col-md-6 blog-right">
-					<div class="col-md-3 agile1">
-						<h5>1</h5>
-						<h6>9月-2016 <small>入职</small></h6>
-						<h5>web</h5>
-						<h6 class="spcl">前端工程师</h6>
-						<h5>20</h5>
-						<h6 class="spcl">1月-2017 <small>离职</small></h6>
-					</div>
-					<div class="col-md-9 agile2">
-						<a href="#" data-toggle="modal" data-target="#myModal"><img src="../images/b2.jpg" alt="" /></a>
-						<a href="#" data-toggle="modal" data-target="#myModal"><h4>鲸力智享（北京）科技有限公司</h4></a>
-						<p>行业类别：移动互联网/企业服务 | 企业性质：民营</p>
-						<p>公司简介：鲸力商旅是国内第一家在企业行政管理领域引入了大数据和人工智能的高科技企业。</p>
-						<p>公司地址：北京朝阳区酒仙桥路14号兆维工业园B3栋4楼云享客</p>
-					</div>
-					<div class="clearfix"></div>
-				</div>
 				<div  class="clearfix"></div>
 			</div>
 		</div>
 	</div>
 <!-- //blog -->
- <div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="myModal" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">工作描述：</h4>
+			</div>
+			<div class="modal-body">
+				<img src="../images/b1.jpg "alt=" " />
+				<p>1.负责公司客立达，分享油客小程序以及管理后台的重构与研发工作;</p>
+				<p>2.负责前端项目环境升级与优化[老项目webapck1升级到webpack4];</p>
+				<p>3.搭建公司私有npm仓库以及项目组件化编程;</p>
+				<p>4.搭建公司前端脚手架tbm-cli（主要实现项目初始化生成便于开发新项目）;</p>
+				<p>5.制定小组项目开发计划，以及实施反馈开发进度;</p>
+				<p>6. 辅助产品经理完成前端需求分析、原型设计、项目计划安排等其它相关工作。</p>
+			</div>
+			<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关 闭</button>
+			</div>
+
+		</div>
+	</div> 
+</div>
+ <div class="modal fade" id="myModal2" role="dialog">
     <div class="modal-dialog">
 		<div class="modal-content">
 			<div class="modal-header">
@@ -465,10 +494,10 @@
 			</div>
 			<div class="modal-body">
 				<img src="../images/b2.jpg "alt=" " />
-				<p>1.公司官网的维护更新以及河北家乡棋牌游戏web页以及游戏admin后台的研发工作。</p>
-				<p>2.公司代理商前端（微信公众号）以及代理商admin后台的研发工作</p>
-				<p>3.搭建公司前端脚手架（主要实现多项目开发与切换）</p>
-				<p>4.制定小组项目开发计划，以及实施反馈开发进度。</p>
+				<p>1.公司官网的维护更新以及河北家乡棋牌游戏web页以及游戏admin后台的研发工作;</p>
+				<p>2.公司代理商前端（微信公众号）以及代理商admin后台的研发工作;</p>
+				<p>3.搭建公司前端脚手架（主要实现多项目开发与切换）;</p>
+				<p>4.制定小组项目开发计划，以及实施反馈开发进度;</p>
 				<p>5.辅助产品经理完成前端需求分析、原型设计、项目计划安排等其它相关工作。</p>
 			</div>
 			<div class="modal-footer">
@@ -479,29 +508,6 @@
 	</div> 
 </div>
      
- <div class="modal fade" id="myModal2" role="dialog">
-    <div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				 <button type="button" class="close" data-dismiss="modal">&times;</button>
-				 <h4 class="modal-title">工作描述：</h4>
-			</div>
-			<div class="modal-body">
-				<img src="../images/b1.jpg "alt=" " />
-				<p>1.公司自己官网的维护更新</p>
-				<p>2.鲸力商旅APP的研发工作。</p>
-				<p>3.使用fullpage.js实现首页的整屏滚动，整个页面布局均采用弹性布局flex</p>
-				<p>4.使用angular框架搭建页面整体架构，使用angular路由机制进行页面嵌套</p>
-				<p>5.辅助部门经理解决开发中遇到的各种问题，及后期测试、维护问题的解决。</p>
-			</div>
-			<div class="modal-footer">
-				  <button type="button" class="btn btn-default" data-dismiss="modal">关 闭</button>
-			 </div>
- 
-		</div>
-	</div> 
-</div>
-
 <div class="modal fade" id="myModa3" role="dialog">
     <div class="modal-dialog">
 		<div class="modal-content">
